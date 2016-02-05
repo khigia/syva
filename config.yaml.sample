@@ -1,0 +1,13 @@
+// port: 8080
+
+slack:
+  incoming_webhook: https://hooks.slack.com/services/YOUR/SESSION/TOKEN  // <- change this
+  username: ACoolBotName  // <- change this
+  icon_emoji: ":ghost:"
+  // channel: "#gitlab"
+
+gitlab:
+  host: http://gitlab.company.com  // <- change this
+  api_path: /api/v3
+  token: your-private-gitlab-token  // <- change this
+
