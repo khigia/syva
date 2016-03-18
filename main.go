@@ -247,6 +247,11 @@ func glMrEvent(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	if mr.ObjectAttributes.Action == "update" && mr.ObjectAttributes.State != "merged" {
+		log.Println("Ignoring update")
+		return
+	}
+
 	description := ""
 	if mr.ObjectAttributes.Action == "open" && mr.ObjectAttributes.State != "merged" {
 		description = " " + mr.ObjectAttributes.Description
